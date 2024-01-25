@@ -15,7 +15,7 @@ import { BiPlay } from "react-icons/bi";
 const Banner = () => {
   return (
     <div>
-      <section className="home">
+      <section className="home" id="home">
         <Swiper
           spaceBetween={30}
           effect={"fade"}
@@ -35,13 +35,17 @@ const Banner = () => {
           <SwiperSlide className="container">
             <img src="images/home1.jpg" alt="" />
             <div className="home-text">
-              <span>Marvel Universe</span>
-              <h1>
-                Venom: Let There <br /> Be Carnage
-              </h1>
-              <a href="#" className="btn">
-                Book Now
-              </a>
+              <div className="home-text-title">
+                <span>Marvel Universe</span>
+                <h1>
+                  Venom: Let There <br /> Be Carnage
+                </h1>
+                +
+                <a href="#" className="btn">
+                  Book Now
+                </a>
+              </div>
+
               <a href="#" className="play">
                 <BiPlay className="icon" />
               </a>
@@ -52,14 +56,16 @@ const Banner = () => {
           <SwiperSlide className="container">
             <img src="images/home2.jpg" alt="" />
             <div className="home-text">
-              <span>Marvel Universe</span>
-              <h1>
-                Avengers:
-                <br /> Infinity War
-              </h1>
-              <a href="#" className="btn">
-                Book Now
-              </a>
+              <div className="home-text-title">
+                <span>Marvel Universe</span>
+                <h1>
+                  Avengers:
+                  <br /> Infinity War
+                </h1>
+                <a href="#" className="btn">
+                  Book Now
+                </a>
+              </div>
               <a href="#" className="play">
                 <BiPlay className="icon" />
               </a>
@@ -70,14 +76,17 @@ const Banner = () => {
           <SwiperSlide className="container">
             <img src="images/home3.jpg" alt="" />
             <div className="home-text">
-              <span>Marvel Universe</span>
-              <h1>
-                Spider-Man:
-                <br /> Far From Home
-              </h1>
-              <a href="#" className="btn">
-                Book Now
-              </a>
+              <div className="home-text-title">
+                <span>Marvel Universe</span>
+                <h1>
+                  Spider-Man:
+                  <br /> Far From Home
+                </h1>
+                <a href="#" className="btn">
+                  Book Now
+                </a>
+              </div>
+
               <a href="#" className="play">
                 <BiPlay className="icon" />
               </a>

@@ -1,62 +1,28 @@
 import React from "react";
 import "./Movies.css";
+import { movies } from "../../../data/data.ts";
 
 const Movies = () => {
   return (
     <div>
       {/* Section Movies */}
-      <section className="movies">
+      <section className="movies" id="movies">
         <h2 className="heading">Opening This Week</h2>
 
         <div className="movies-container">
-          {/* Box 1 */}
-          <div className="box">
-            <div className="box-img">
-              <img src="images/m1.jpg" alt="" />
-            </div>
-            <h3>Venom</h3>
-            <span>120 min | Action</span>
-          </div>
-          {/* Box 1 */}
-          <div className="box">
-            <div className="box-img">
-              <img src="images/m1.jpg" alt="" />
-            </div>
-            <h3>Venom</h3>
-            <span>120 min | Action</span>
-          </div>
-          {/* Box 1 */}
-          <div className="box">
-            <div className="box-img">
-              <img src="images/m1.jpg" alt="" />
-            </div>
-            <h3>Venom</h3>
-            <span>120 min | Action</span>
-          </div>
-          {/* Box 1 */}
-          <div className="box">
-            <div className="box-img">
-              <img src="images/m2.jpg" alt="" />
-            </div>
-            <h3>Venom</h3>
-            <span>120 min | Action</span>
-          </div>{" "}
-          {/* Box 1 */}
-          <div className="box">
-            <div className="box-img">
-              <img src="images/m3.jpg" alt="" />
-            </div>
-            <h3>Venom</h3>
-            <span>120 min | Action</span>
-          </div>{" "}
-          {/* Box 1 */}
-          <div className="box">
-            <div className="box-img">
-              <img src="images/m4.jpg" alt="" />
-            </div>
-            <h3>Venom</h3>
-            <span>120 min | Action</span>
-          </div>
+          {movies.map((movie) => {
+            return (
+              <div className="box" key={movie.title}>
+                <div className="box-img">
+                  <img src={movie.img} alt="" />
+                </div>
+                <h3>{movie.title}</h3>
+                <span>
+                  {movie.duration} min | {movie.type}
+                </span>
+              </div>
+            );
+          })}
         </div>
       </section>
     </div>

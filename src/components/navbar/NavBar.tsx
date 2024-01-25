@@ -2,10 +2,10 @@ import React from "react";
 import { BiMenu, BiSolidMovie } from "react-icons/bi";
 import "./NavBar.css";
 
-const NavBar = () => {
+const NavBar = (props) => {
   return (
     <div style={{ width: "100%" }}>
-      <header>
+      <header className={props.shadowHeader && "shadow"}>
         <a href="#" className="logo">
           <BiSolidMovie className="logo-icon" />
           <span>Movies</span>

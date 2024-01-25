@@ -43,6 +43,11 @@
   padding: 0 150px;
 }
 
+.home-text-title {
+  position: absolute;
+  top: 20%;
+}
+
 .home-text h1 {
   color: var(--bg-color);
   font-size: 4rem;

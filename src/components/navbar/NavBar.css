@@ -74,8 +74,26 @@ header {
   border-radius: 0.5rem;
   color: var(--bg-color);
   background: var(--main-color);
+  transition: 0.5s ease;
 }
 
 .btn:hover {
-  background: #fa1216;
+  background: #a3212c;
+}
+
+.shadow {
+  background: var(--bg-color);
+  -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+
+.shadow .navbar a,
+.shadow .logo,
+.shadow .logo span {
+  color: var(--text-color);
+}
+
+.shadow .logo {
+  color: var(--text-color);
 }

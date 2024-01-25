@@ -1,0 +1,29 @@
+.coming {
+  max-width: 968px;
+  margin: 0 auto;
+}
+
+.heading {
+  margin-bottom: 2rem;
+}
+
+.coming .swiper-pagination-bullet {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 0.2rem !important;
+  background: var(--bg-color) !important;
+  opacity: 0 !important;
+}
+
+.coming .box h3 {
+  text-transform: capitalize;
+  margin-top: 5px;
+}
+
+.coming .box span {
+  text-transform: capitalize;
+}
+
+.coming .box .box-img img:hover {
+  transform: translateY(0);
+}
