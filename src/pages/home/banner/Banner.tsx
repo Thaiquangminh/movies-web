@@ -15,7 +15,7 @@ import { BiPlay } from "react-icons/bi";
 const Banner = () => {
   return (
     <div>
-      <section className="home" id="home">
+      <div className="home" id="home">
         <Swiper
           spaceBetween={30}
           effect={"fade"}
@@ -40,7 +40,6 @@ const Banner = () => {
                 <h1>
                   Venom: Let There <br /> Be Carnage
                 </h1>
-                +
                 <a href="#" className="btn">
                   Book Now
                 </a>
@@ -93,7 +92,7 @@ const Banner = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-      </section>
+      </div>
     </div>
   );
 };

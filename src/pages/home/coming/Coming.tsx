@@ -25,6 +25,20 @@ const Coming = () => {
           }}
           modules={[Pagination]}
           className="mySwiper"
+          breakpoints={{
+            0: {
+              slidesPerView: 2,
+            },
+            568: {
+              slidesPerView: 3,
+            },
+            768: {
+              slidesPerView: 4,
+            },
+            968: {
+              slidesPerView: 5,
+            },
+          }}
         >
           <div className="coming-container">
             {/* Box 1 */}

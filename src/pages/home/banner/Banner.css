@@ -38,6 +38,10 @@
 
 /* Home css */
 
+.home {
+  margin-bottom: 50px;
+}
+
 .home-text {
   z-index: 1000;
   padding: 0 150px;
@@ -46,6 +50,7 @@
 .home-text-title {
   position: absolute;
   top: 20%;
+  left: 5%;
 }
 
 .home-text h1 {

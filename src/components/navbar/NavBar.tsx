@@ -1,18 +1,37 @@
-import React from "react";
-import { BiMenu, BiSolidMovie } from "react-icons/bi";
+import React, { useState } from "react";
+import { BiMenu, BiSolidMovie, BiX } from "react-icons/bi";
 import "./NavBar.css";
 
-const NavBar = (props) => {
+type NavBarProps = {
+  handleSignIn: (e) => void;
+  shadowHeader: boolean;
+};
+
+const NavBar = (props: NavBarProps) => {
+  const [openMenu, setOpenMenu] = useState(false);
+
   return (
     <div style={{ width: "100%" }}>
-      <header className={props.shadowHeader && "shadow"}>
+      <header className={props.shadowHeader ? "shadow" : ""}>
         <a href="#" className="logo">
           <BiSolidMovie className="logo-icon" />
           <span>Movies</span>
         </a>
-        <BiMenu className="bx" id="menu-icon" />
+        {openMenu ? (
+          <BiX
+            className="bx"
+            id="menu-icon"
+            onClick={() => setOpenMenu(false)}
+          />
+        ) : (
+          <BiMenu
+            className="bx"
+            id="menu-icon"
+            onClick={() => setOpenMenu(true)}
+          />
+        )}
 
-        <ul className="navbar">
+        <ul className={`navbar ${openMenu ? "show-navbar" : "hide-navbar"}`}>
           <li>
             <a href="#home" className="home-active">
               Home
@@ -29,7 +48,7 @@ const NavBar = (props) => {
           </li>
         </ul>
 
-        <a href="" className="btn">
+        <a href="#" className="btn" onClick={props.handleSignIn}>
           Sign In
         </a>
       </header>

@@ -1,0 +1,139 @@
+/* Custom scroll bar */
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 5rem;
+}
+
+section {
+  padding: 50px 0px;
+}
+
+.home-wrapper section:first-child {
+  padding-top: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .home-text {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  header {
+    padding: 18px 4%;
+  }
+
+  .home-wrapper section {
+    padding: 50px 4%;
+  }
+}
+
+@media screen and (max-width: 774px) {
+  header {
+    padding: 12px 4%;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    row-gap: 1.4rem;
+    background: var(--bg-color);
+    padding: 20px;
+    box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
+    transition: 2s all linear;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .navbar a {
+    color: var(--text-color);
+  }
+
+  .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+  }
+
+  .navbar a::after {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .show-navbar {
+    animation: show-navbar 0.3s linear;
+    display: flex;
+  }
+
+  .hide-navbar {
+    animation: hide-navbar 0.3s linear forwards;
+  }
+
+  .home-text h1 {
+    font-size: 2.7rem !important;
+  }
+}
+
+@media screen and (max-width: 472px) {
+  .newsletter form .email {
+    width: auto;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+
+  .home-text h1 {
+    font-size: 1.7rem !important;
+  }
+
+  .play {
+    right: 2rem !important;
+    bottom: 8% !important;
+  }
+
+  .play .icon {
+    padding: 4px !important;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  header {
+    padding: 8px 4%;
+  }
+}
+
+/* Animation */
+@keyframes show-navbar {
+  0% {
+    top: 80%;
+    opacity: 0;
+  }
+  100% {
+    top: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes hide-navbar {
+  0% {
+    top: 100%;
+    opacity: 1;
+  }
+  100% {
+    top: 80%;
+    opacity: 0;
+  }
+}
