@@ -1,0 +1,126 @@
+.detail-container {
+  display: flex;
+  padding: 0 25px;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.detail-main-img img {
+  width: 240px;
+}
+
+/* Brief */
+
+.detail-brief {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 20px;
+  flex-basis: 33%;
+}
+
+.detail-brief .button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 240px;
+  height: 48px;
+  border-radius: 3px;
+  color: var(--text-color);
+  background: var(--bg-color);
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.detail-brief .button svg {
+  font-size: 1.5rem;
+}
+
+.detail-brief .info-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 5px;
+  width: 240px;
+}
+
+.detail-brief .info {
+  display: flex;
+  align-items: center;
+}
+
+.detail-brief .info-detail {
+  color: lightgray;
+  font-size: 0.9rem;
+  min-width: 100px;
+}
+
+/* End Brief */
+
+/* Content */
+.detail-content {
+  flex-basis: 50%;
+  color: lightgray;
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-container .specifications {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.detail-container .progress-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  background: radial-gradient(closest-side, #081c22 80%, transparent 85% 100%),
+    conic-gradient(lightgreen 76%, #081c22 0);
+}
+
+.detail-content .type {
+  background-color: #333;
+  border-radius: 6px;
+  margin-right: 6px;
+  padding: 6px;
+  font-size: 0.9rem;
+}
+
+.detail-content .title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.detail-content .description {
+  line-height: 1.5rem;
+}
+
+/* End content */
+
+.cast img {
+  width: 140px;
+}
+
+.cast {
+  max-width: 800px;
+}
+
+.cast .caster-name {
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.cast .swiper-pagination-bullet {
+  opacity: 0 !important;
+}

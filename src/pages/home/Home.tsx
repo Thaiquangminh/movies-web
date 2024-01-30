@@ -8,22 +8,26 @@ import Banner from "./banner/Banner.tsx";
 import Coming from "./coming/Coming.tsx";
 import Newsletter from "./newsletter/Newsletter.tsx";
 import Footer from "../../components/footer/Footer.tsx";
-import ModalCustom from "../../components/commons/Modal.tsx";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  //#region "Component State"
   const [shadowHeader, setShadowHeader] = useState(false);
-  const [isOpenSignInModal, setIsOpenSignInModal] = useState(true);
+  const navigate = useNavigate();
+  //#endregion
 
   const handleScroll = useCallback(() => {
     setShadowHeader(window.scrollY > 0);
   }, []);
 
+  //#region "Effects
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [handleScroll]);
+  //#endregion
 
   return (
     <div className="home-wrapper">
@@ -31,7 +35,7 @@ const Home = () => {
         shadowHeader={shadowHeader}
         handleSignIn={(e) => {
           e.preventDefault();
-          setIsOpenSignInModal(true);
+          navigate("/login");
         }}
       />
       <Banner />
@@ -39,14 +43,6 @@ const Home = () => {
       <Coming />
       <Newsletter />
       <Footer />
-      <ModalCustom
-        isOpen={isOpenSignInModal}
-        onRequestClose={() => setIsOpenSignInModal(false)}
-      >
-        <div style={{ color: "red" }}>
-          3122222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
-        </div>
-      </ModalCustom>
     </div>
   );
 };

@@ -1,10 +1,13 @@
 import React from "react";
 import "./login.css";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <div className="login-form-container">
       <img
+        onClick={() => navigate("/")}
         className="login-website-logo"
         src="https://res.cloudinary.com/dyx9u0bif/image/upload/v1657426908/lg-devices-logo_rpfa68.png"
         alt="website logo"
